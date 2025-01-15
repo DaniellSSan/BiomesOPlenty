@@ -40,6 +40,7 @@ import net.minecraftforge.common.IShearable;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 import vazkii.botania.api.item.IHornHarvestable;
 
 import java.util.ArrayList;
@@ -267,7 +268,8 @@ public class BlockBOPFlower extends BlockBOPDecoration implements IShearable, IH
         boolean onFertile = (groundBlock == Blocks.DIRT || groundBlock == Blocks.FARMLAND || groundBlock == BOPBlocks.farmland_0 || groundBlock == BOPBlocks.farmland_1 || groundBlock == BOPBlocks.dirt || groundBlock == Blocks.GRASS);
         boolean onDry = (groundBlock == Blocks.HARDENED_CLAY || groundBlock == BOPBlocks.sand || groundBlock == Blocks.SAND || groundBlock == BOPBlocks.white_sand);
         boolean onNetherrack = (groundBlock == Blocks.NETHERRACK);
-        boolean onStone = (groundBlock == Blocks.STONE);
+        // boolean onStone = (groundBlock == Blocks.STONE); #OLD
+        boolean onStone = (groundBlock == OreDictionary.ore:stone);
         boolean onDriedSand = (groundBlock == BOPBlocks.dried_sand);
         boolean onSpectralMoss = false;
         
