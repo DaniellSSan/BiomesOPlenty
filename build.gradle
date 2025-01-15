@@ -89,13 +89,13 @@ task changelog(type: JenkinsChangelog) {
 
     serverRoot = 'http://ci.jenkins.minecraftforge.net/'
     jobName = 'BiomesOPlenty'
-    authName = project.getProperty('forgeJenkinsUsername')
-    authPassword = project.getProperty('forgeJenkinsPassword')
+    //authName = project.getProperty('forgeJenkinsUsername')
+    //authPassword = project.getProperty('forgeJenkinsPassword')
     targetBuild = buildNumber.toString()
     output = 'build/libs/' + project.getName() + '-' + project.version + '-changelog.txt'
 }
 
-uploadArchives.dependsOn 'changelog'
+//uploadArchives.dependsOn 'changelog' # hopefully disable attempt to upload changelog
 
 task sourcesJar(type: Jar) {
     from sourceSets.main.allJava
